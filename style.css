@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+   margin: 0; 
+scroll-behavior: smooth;
+text-decoration: none;
+list-style: none;
+box-sizing: border-box;
+}
+.header{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: hsl(0, 0%, 98% );
+    transition:all,45s ease;
+    padding-left:2% ;
+
+}
+.menu{
+    display: none;
+}
+.navmenu {
+    flex: 1;
+    text-align: left;
+    padding-left: 5%;
+}
+.navmenu ul li{
+    display: inline-block;
+    margin: 0 25px;
+    line-height: 80px;
+    position: relative;
+}
+.navmenu ul li a{
+    display: block;
+    color: hsl(0, 0%, 8%);
+    font-size: 17px;
+    padding: 14px 16px;
+    font-weight: 500;
+    text-align: center;
+    justify-content: space-between;
+}
+.white{
+    
+    background-color: white;
+    height: auto;
+}
+ul li ul.dropdown li{
+    display: block;
+    font-size: 10px;
+}
+ul li ul.dropdown {
+    width: 200px;
+  position: absolute;
+    z-index: 1000 ;
+    display: none;
+    background-color: hsl(0, 0%, 100% );
+} 
+
+ul li:hover ul.dropdown{
+    display: block;
+}
+ul li ul.mobile-dropdown li{
+    display: block;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+ul li ul.mobile-dropdown {
+    width: 200px;
+  position: absolute;
+    z-index: 1000 ;
+    display: none;
+    font-size: 30px;
+    background-color: hsl(0, 0%, 100% );
+} 
+
+ul li:hover ul.mobile-dropdown{
+    display: block;
+}
+
+.grid-container{
+    display: grid;
+    grid-gap: 50px 100px;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 50px;
+    padding: 10px;
+    margin-left: 50px;
+    background-color: white;
+}
+
+    
+button{
+    color: black;
+    padding: auto;
+    background-color: hsl(0, 0%, 100% );
+    width: 120px;
+    border-radius: 8px;
+    height: 30px;
+}
+h1{
+    font-size: 4rem;
+font-weight: 700;
+}
+.svg{
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+}
+p{
+    font-size: 18px;
+    padding: 50px 0; 
+    font-family: "Epilogue", serif;
+    justify-content: space-evenly;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.div{
+    margin: auto;
+    padding-top: 50px;
+    padding-left:10px ;
+
+}
+.img{
+    padding-top: 50px;
+    width: 50vh;
+
+}
+.right{
+    float:right;
+    padding-right:10%;
+}
+.header.menubar{
+    display: block;
+margin: 10px;
+font-size: 12px;
+cursor: pointer;
+}
+.menubar ul li{
+    display: flex;
+}
+.tagline{
+    display: block;
+}
+.mobile-img{
+    visibility: hidden;
+}
+#mobile-navigation-sidebar{
+    display: none;
+    height: 100vh;
+    width: 40vh;
+    background-color: white;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    
+    
+}
+.mobile-drop{
+    margin: 20px;
+
+}
+.mobile-login{
+    margin-left: 100px;
+
+}
+.mobile{
+    margin-top: 20px;
+    color: black;
+}
+.reg{
+    margin-left: 70px;
+    margin-top: 10px;
+    background-color: white;
+    width: 20vh;
+    border-radius: 8px;
+    height: 5vh;
+}
+@media (max-width:1440px) {
+    .navmenu a:not(:first-child)
+    {display: none;}
+    .navmenu a.menu{
+        float: right;
+        display: block;
+    }
+    .white{
+        height: 20%;
+    }
+}
+ @media (max-width:550px){
+    .navmenu.responsive {
+        position: relative;
+    }
+    .navmenu.responsive .menu{
+        position: absolute;
+    }
+    .navmenu.responsive a{
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .mobile-img{
+        visibility: initial;
+        margin-bottom:-600px;
+    }
+    .grid-container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .tagline{
+        display: inline;
+    }
+    .tagline-container{
+        font-size:40px;
+        text-align: left;
+    }
+    .nav-item-container{
+        visibility: hidden; 
+        display: block;
+        line-height: 30px;
+        margin: 50px 0;
+    }
+    button{
+        background-color: hsl(0, 0%, 8%);
+        color: hsl(0, 0%, 100% ); 
+        margin-left: 150px;
+    }
+   .img {
+        padding-left: 5%;
+        visibility: hidden;
+    }
+    .svg{
+        gap: 10px;
+        padding-top:50px;
+    }
+    .menu{
+        display:inline-block;
+        position: relative;
+    } 
+    .show .nav-item-container a{
+        font-size: 20px;
+    }
+    .show{
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        z-index:1;
+    }
+    #myNavmenu{
+        display: fixed;
+        width: 20%;
+        height: 100%;
+    }
+    .div{
+        padding-top: -100px;
+    }
+}
+   
