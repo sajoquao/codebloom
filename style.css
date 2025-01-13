@@ -193,7 +193,7 @@ cursor: pointer;
         height: 20%;
     }
 }
- @media (max-width:550px){
+ @media (max-width:375px){
     .navmenu.responsive {
         position: relative;
     }
